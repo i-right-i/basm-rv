@@ -4,12 +4,12 @@
 @constant [2a]			# Constants are case sensetive, hexdecimal is not case sensetive.
 				# Constants Must be defined before used
 						
-:Start:				# Creates a Label - Labels are just named address offsets.
-						
+:Start:				# Creates a Label - name goes between the :
+				# Labels are just named address offsets.		
 						
 ADD 	x0,x0,x0		# For instance this NOP instructions address is equal to :Start:
 ADDI	x1,x0,@constant 	# Add's Immedant value of constant to Register x1
-BEQ	x0,x1,>Start		# If x1 = zero jump to :Start:  
+BEQ	x0,x1,>Start		# If x1 = zero jump to :Start: uses the Greater than sign then the label name
 ADD 	x1,x2,x3		# x1 = x2 + x3 
 
 jalr	x3,x0,>Start		# Jump to :Start: create infinate loop
